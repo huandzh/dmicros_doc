@@ -1,1 +1,3 @@
 site_name: Dmicros用户指南
+docs_dir: 'doc_srcs'
+site_dir: 'docs'
