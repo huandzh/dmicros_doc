@@ -10,6 +10,8 @@ API的地址是[dmicros.iamhd.top](https://dmicros.iamhd.top).
 
 API遵循RESTFul标准，使用pyeve软件包开发，本份指南中将只包括Dmicros独有的设置，其他未尽事项（如错误返回格式等）请您参考[pyeve文档](http://python-eve.org)。
 
+如果您有任何问题，都可以到[本份文档的托管项目](https://coding.net/u/huand/p/dmicros_doc/topic)进行提问和讨论。
+
 以下均使用`curl`命令来示例请求。示例中的具体数据不是真实数据，主要供参考格式。
 
 ## 获取API令牌（token）
