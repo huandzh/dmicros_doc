@@ -95,6 +95,7 @@ curl https://dmicros.iamhd.top/vdatas  -H "Authorization:<your access token>"
       "data": <your visualization data>,
       "description": "用红蓝分布图表示人群分布差异，红色代表该人群在英朗中占比高于轿车A级人群",
       "name": "cluster_yinglang",
+      "vtype": "consumerCluster",
       "tags": [
         "人群分类"
       ],
@@ -160,6 +161,7 @@ curl https://dmicros.iamhd.top/vdatas/cluster_yinglang  -H "Authorization:<your 
   "data": <your visualization data>,
   "description": "用红蓝分布图表示人群分布差异，红色代表该人群在英朗中占比高于轿车A级人群",
   "name": "cluster_yinglang",
+  "vtype": "consumerCluster",
   "tags": [
     "人群分类"
   ],
@@ -303,7 +305,7 @@ curl -XPOST https://dmicros.iamhd.top/clusteds  -H "Authorization:<your access t
 
 **返回：**
 
-返回中的`"href": "clusteds/5a90f132c78ef35c4730d0df"`可以用于取回结果。
+返回中的`summary`包括计算结果，你也可以使用`"href": "clusteds/5a90f132c78ef35c4730d0df"`取回结果。
 
 ```json
 {
@@ -317,6 +319,7 @@ curl -XPOST https://dmicros.iamhd.top/clusteds  -H "Authorization:<your access t
       "href": "clusteds/5a90f132c78ef35c4730d0df"
     }
   },
+  "summary": "1,RAV4,6,3,3,1",
   "_status": "OK"
 }
 ```
