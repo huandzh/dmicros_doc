@@ -14,7 +14,7 @@ Dmicros服务大致由纯前端APP、API服务和数据库服务等部分构成�
 
     rectangle "应用层" {
         node "管理应用" as ManagerApp
-        node "计算应用"
+        node "计算应用" as AnalystApp
         node "用户PCWeb应用"
         node "用户Mobile应用"
         node "用户MobileWeb应用"
@@ -33,6 +33,8 @@ Dmicros服务大致由纯前端APP、API服务和数据库服务等部分构成�
    rectangle 用户 {
         actor "开发者" as Developer
         actor "终端用户" as User
+        actor "管理员" as Maintainer
+        actor "分析师" as Analyst
     }
 
     [Dmicros API] -- [docker:HTTPS]
@@ -41,6 +43,8 @@ Dmicros服务大致由纯前端APP、API服务和数据库服务等部分构成�
     [web:HTTPS] -- [用户MobileWeb应用]
     [docker:HTTPS] -(0)- 应用层
 
+    Maintainer --> ManagerApp
+    Analyst --> AnalystApp
     Developer --> [docker:HTTPS]
     User --> [web:HTTPS]
     User --> [用户Mobile应用]

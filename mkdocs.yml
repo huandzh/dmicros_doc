@@ -4,7 +4,7 @@ site_dir: 'docs'
 
 pages:
 - 用户指南: 'index.md'
-- 部署: 'deploy.md'
+- 部署指南: 'deploy.md'
 
 markdown_extensions:
 - plantuml
