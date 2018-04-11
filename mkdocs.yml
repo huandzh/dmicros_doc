@@ -1,3 +1,10 @@
-site_name: Dmicros用户指南
+site_name: Dmicros文档
 docs_dir: 'doc_srcs'
 site_dir: 'docs'
+
+pages:
+- 用户指南: 'index.md'
+- 部署: 'deploy.md'
+
+markdown_extensions:
+- plantuml
