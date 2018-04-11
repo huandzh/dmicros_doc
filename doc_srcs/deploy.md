@@ -163,4 +163,44 @@ API托管：
 
 已利用时速云和coding.net平台服务部署了Demo版，具体部署可供参考。
 
-TODO：介绍具体方案
+::uml:: format="svg"
+
+    cloud "时速云TenxCloud容器服务" {
+        node MongoDB {
+            storage "db:dmicros"
+        }
+        node ApiImage [
+            Dmicros API
+            ====
+            Docker镜像
+        ]
+        interface "docker:HTTPS"
+        ApiImage -- [docker:HTTPS]
+    }
+
+    [db:dmicros] -- ApiImage : 镜像环境变量MONGO_URI
+
+    cloud "Coding.net源代码和Pages托管服务" {
+        node WebApp [
+            用户应用
+            ====
+            纯前端应用
+        ]
+        interface "web:HTTPS"
+        WebApp -- [web:HTTPS]
+
+    }
+    [docker:HTTPS] -- WebApp : API服务根地址
+
+::end-uml::
+
+时速云提供的相关能力：
+
+  * Docker镜像仓库托管
+  * 镜像持续构建
+  * HTTPS转发
+
+coding.net提供的相关能力：
+
+  * 源代码托管
+  * 动静态web服务托管

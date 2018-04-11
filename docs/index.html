@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="./img/favicon.ico">
-        <title>Dmicros用户指南</title>
+        <title>Dmicros文档</title>
         <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="./css/base.css" rel="stylesheet">
@@ -31,11 +31,27 @@
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
-            <a class="navbar-brand" href=".">Dmicros用户指南</a>
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">Dmicros文档</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href=".">用户指南</a>
+                    </li>
+                    <li >
+                        <a href="deploy/">部署</a>
+                    </li>
+                </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -43,6 +59,16 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="deploy/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
@@ -677,5 +703,5 @@
 
 <!--
 MkDocs version : 0.17.2
-Build Date UTC : 2018-03-20 06:21:36
+Build Date UTC : 2018-04-11 03:42:56
 -->
